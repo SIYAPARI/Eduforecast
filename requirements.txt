@@ -3,4 +3,4 @@ numpy
 seaborn
 matplotlib
 # to trigger setup.py along with whenever requirementss.txt is updated 
--e .
+# -e .
