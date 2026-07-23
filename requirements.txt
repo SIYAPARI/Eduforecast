@@ -5,5 +5,6 @@ matplotlib
 scikit-learn
 catboost
 xgboost
+dill
 # to trigger setup.py along with whenever requirementss.txt is updated 
 # -e .
