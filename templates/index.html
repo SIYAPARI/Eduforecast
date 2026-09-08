@@ -1,1 +1,159 @@
-<h1>WELcome</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduForecast - Student Performance Predictor</title>
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --primary-hover: #4338ca;
+            --bg-card: #ffffff;
+            --text-main: #1f2937;
+            --text-muted: #6b7280;
+            --border-color: #e5e7eb;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #f8fafc;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .landing-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            max-width: 680px;
+            width: 100%;
+            padding: 48px 40px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #eef2ff;
+            color: var(--primary-color);
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 9999px;
+            margin-bottom: 20px;
+            letter-spacing: 0.025em;
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        p.description {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 36px;
+            text-align: left;
+        }
+
+        .feature-item {
+            background: #f9fafb;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 16px;
+        }
+
+        .feature-title {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #1f2937;
+            margin-bottom: 6px;
+        }
+
+        .feature-desc {
+            font-size: 0.825rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        .btn-start {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: var(--primary-color);
+            color: #ffffff;
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 14px 32px;
+            border-radius: 10px;
+            transition: background 0.2s ease, transform 0.15s ease;
+            box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2);
+        }
+
+        .btn-start:hover {
+            background: var(--primary-hover);
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 640px) {
+            .feature-list {
+                grid-template-columns: 1fr;
+            }
+            .landing-card {
+                padding: 32px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="landing-card">
+        <span class="badge">Machine Learning System</span>
+        <h1>Welcome to EduForecast</h1>
+        <p class="description">
+            Predict student math performance with high accuracy and explainable AI insights based on demographic, academic, and socioeconomic indicators.
+        </p>
+
+        <div class="feature-list">
+            <div class="feature-item">
+                <div class="feature-title">🎯 Score Prediction</div>
+                <div class="feature-desc">Estimated math exam score based on verified machine learning regression.</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-title">🔍 Explainable AI</div>
+                <div class="feature-desc">Discover the top driving factors influencing each individual prediction.</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-title">📊 Impact Breakdown</div>
+                <div class="feature-desc">Detailed feature-by-feature positive and negative contribution metrics.</div>
+            </div>
+        </div>
+
+        <a href="/predictions" class="btn-start">
+            Launch Score Predictor &rarr;
+        </a>
+    </div>
+</body>
+</html>

@@ -32,8 +32,14 @@ def predict_datapoint():
         print(pred_df)
 
         predict_pipeline=Predict_Pipeline()
-        results=predict_pipeline.predict(pred_df)
-        return render_template('home.html',results=results[0])
+        explainability_result=predict_pipeline.explain_prediction(pred_df)
+        return render_template(
+            'home.html',
+            prediction=explainability_result["prediction"],
+            confidence_pct=explainability_result["confidence_pct"],
+            top_drivers=explainability_result["top_drivers"],
+            feature_contributions=explainability_result["feature_contributions"]
+        )
 
 if __name__=='__main__':
     app.run(host="0.0.0.0",debug=True)
